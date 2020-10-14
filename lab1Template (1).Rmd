@@ -1,0 +1,69 @@
+---
+title: "Lab 1 - Template"
+author: "Your Group Name Here!"
+date: "9/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Lab 1
+
+Use the file  **RealEstateData1.csv** to answer the questions below.  
+
+
+1.  (10 points) Clean and stylish.  
+
+1.  (10 points)  Consider these variables:  **SalePrice, GrLivArea, X1stFlrSF, OverallQual, LotArea, and GarageArea.** For each variable, compute the following sample statistics:  the extremes, quartiles, mean, median, variance, standard deviation, range, and fourth spread (IQR). 
+
+```{r}
+data <- read.csv("RealEstateData1.csv", header = T)
+```
+
+```{r}
+str(data)
+```
+```{r}
+data[1:10, 1:4]
+```
+
+1. (10 points) Produce boxplots for these 5 variables **SalePrice, GrLivArea, X1stFlrSF, LotArea, and GarageArea**.  This should be five separate plots.  
+
+```{r}
+
+```
+
+
+1. (10 points) Produce a grouped boxplot for **SalePrice** by **HouseStyle**.  Choose good colors.  
+
+```{r}
+
+```
+
+
+1. (10 points) Produce histograms for the 6 variables **SalePrice, GrLivArea, X1stFlrSF, OverallQual, LotArea, and GarageArea**.  Choose good colors. 
+
+```{r}
+
+```
+
+
+1.  (10 points) You could argue that one of the histograms isn't really a histogram.  Which one?  And if it's not a histogram, what is it?  
+
+
+1. (10 points) Consider the variable **Fireplaces** and **TotRmsAbvGrd**. Does the mean value of **TotRmsAbvGrd** change for houses with 0, 1, 2, and 3 fireplaces? Does the minimum value of **TotRmsAbvGrd** change for houses with 0, 1, 2, and 3 fireplaces? Group by the variable **Fireplaces**, summarize the variable **TotRmsAbvGrd* and find out!
+
+```{r}
+data1 <- read.table("RealEstateData1.csv",sep=",", header = T,,stringsAsFactors = TRUE,na.strings = c("NA"))
+```
+
+```{r}
+data2 <- read.table("RealEstateData1.csv",sep=",", header = T,stringsAsFactors = FALSE,na.strings = c("NA"))
+```
+
+```{r}
+data3 <- read.table("RealEstateData1.csv",sep=",", header = T,stringsAsFactors = TRUE,na.strings = c("NA","."))
+```
